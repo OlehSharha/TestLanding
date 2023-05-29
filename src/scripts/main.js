@@ -43,3 +43,23 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = 'block';
   dots[slideIndex - 1].className += ' active';
 }
+
+const manImage = document.getElementById('man-image');
+const container = manImage.parentNode;
+
+document.addEventListener('mousemove', handleMouseMove);
+
+function handleMouseMove(event) {
+  const containerRect = container.getBoundingClientRect();
+  const containerWidth = container.offsetWidth;
+  const containerHeight = container.offsetHeight;
+
+  const mouseX = event.clientX;
+  const mouseY = event.clientY;
+
+  const offsetX = Math.min(Math.max(mouseX - containerRect.left - 100, 0), containerWidth);
+  const offsetY = Math.min(Math.max(mouseY - containerRect.top - 100, 0), containerHeight);
+
+  manImage.style.transition = 'transform 1.5s ease';
+  manImage.style.transform = `translate(${offsetX / 5}px, ${offsetY / 5}px)`;
+}
