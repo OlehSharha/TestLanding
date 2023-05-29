@@ -1,0 +1,11 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+
+  &__link {
+    color: #ffffff;
+    text-decoration: none;
+  }
+}

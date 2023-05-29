@@ -1,0 +1,19 @@
+.mainContent {
+  height: 100%;
+  width: 100%;
+
+  &__prices {
+    width: 100%;
+    background-color: black;
+  }
+
+  &__aboutStudying {
+    width: 100%;
+    background-color: white;
+  }
+
+  &__firstPart {
+    background-color: rgb(2,0,36);
+    background: linear-gradient(129deg, rgba(2,0,36,1) 0%, rgba(5,5,236,1) 89%, rgba(0,212,255,1) 100%);
+  }
+}
